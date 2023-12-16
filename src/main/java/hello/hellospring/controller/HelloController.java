@@ -15,7 +15,7 @@ public class HelloController {
   }
 
   @GetMapping("hello-mvc")
-  public String helloMvc(@RequestParam(value = "name") String name, Model model) {
+  public String helloMvc(@RequestParam(value = "name") String name, Model model) { // 외부에서 파라미터를 받는거
     model.addAttribute("name", name);
     return "hello-template";
   }
